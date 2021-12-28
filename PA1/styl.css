@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+h1{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: -20px;
+    text-align: center;
+    font-size: 1000%;
+    font-weight: lighter;
+    font-family: 'Mr De Haviland', cursive;
+    /* font-family: 'Monsieur La Doulaise', cursive; */
+}
+
+
+.intro{
+    position: relative;
+    padding: 5%;
+    background-color: rgb(222, 184, 135);
+    background-image: url("imges/bg4.jpg");
+    background-position: center;
+    width:100%;
+    background-size:cover;
+    box-shadow:0px 0px 10px 4px rgba(0, 0, 0, 0.15);
+}
+
+.intro::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.596);
+}
+
+.Juan, .info{ /*container for juan image flex so its always center*/
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+.juan-pic{ /*juan image 100% so it always fits container Juan*/
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width:1000px){ /*flex only when screen big*/
+    .intro{
+        padding: 5% 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .juan-pic{
+        max-height: 500px;
+    }
+    
+    .info{
+        width: 40%;
+    }
+}
+
+.info p{
+    font-size: 150%;
+    text-align: justify;
+    line-height:1.5;
+}
+
+/*gallery styling part*/
+
+.gallery{
+    margin:20% 20px 0 20px;
+}
+
+.rows{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.cols{
+    display:flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+.cols img{
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 5%;
+}
