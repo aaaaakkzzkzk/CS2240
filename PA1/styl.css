@@ -150,9 +150,55 @@ h1{
     width: 32%;
 }
 
-.cols img{
-    max-height: 100%;
-    max-width: 100%;
-    margin-bottom: 5%;
+
+/*overlay part*/
+
+
+.image-box {
+    position:relative;
+    width: 100%;
     border-radius: 5px;
+    margin-bottom: 5%;
+    padding:0;
+    overflow: hidden;
+    display: flex;
+    direction: column;
+
 }
+
+.overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    opacity:0;
+    transition: opacity 0.2s;
+}
+
+.image-box img{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: contain;
+    transform: scale(1);
+    transition: transform .5s, filter .5s
+}
+
+.image-box:hover .overlay{
+    opacity: 1;
+}
+
+.image-box:hover img{
+    opacity: 1;
+    transform: scale(1.09);
+    filter: blur(2px);
+}
+
