@@ -26,7 +26,7 @@ body{
       position:fixed;
       top: 0px;
       padding: 0 10%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
   }
 
  .gscroll{
@@ -60,7 +60,9 @@ header{
     flex-direction: column;
     align-items: center;
     padding: 10%;
-    margin-top:5%;
+    margin-top:2%;
+    margin-bottom:2%;
+
 }
 
 h1{
@@ -70,8 +72,8 @@ h1{
     text-align: center;
     font-size: 1000%;
     font-weight: lighter;
-    font-family: 'Mr De Haviland', cursive;
-    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Mr De Haviland', cursive, serif;
+    font-family: 'Monsieur La Doulaise', cursive, serif;
 }
 
 
@@ -134,8 +136,10 @@ h1{
 
 /*gallery styling part*/
 
+
+
 .gallery{
-    padding:150px 20px 0 20px;
+    padding:10% 5% 2% 5%;
 }
 
 .rows{
@@ -176,10 +180,18 @@ h1{
     justify-content: center;
     align-items: center;
 
-    color: white;
     background-color: rgba(0,0,0,0.4);
     opacity:0;
     transition: opacity 0.2s;
+}
+
+.overlay span{
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Mr De Haviland', cursive, serif;
+    font-size: 400%;
+    color: white;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .image-box img{
@@ -202,3 +214,24 @@ h1{
     filter: blur(2px);
 }
 
+
+@media (max-width:1000px){
+    .overlay span{
+        font-size: 250%;
+    }
+}
+
+@media (max-width: 650px){
+    .rows {
+        flex-direction: column;
+    }
+    .gallery {
+        padding:10% 8% 5% 8%;
+    }
+     .cols {
+        width: 100%;
+     }
+     .overlay span{
+        font-size: 400%;
+    }
+}
