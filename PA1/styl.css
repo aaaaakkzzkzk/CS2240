@@ -139,7 +139,7 @@ h1{
 
 
 .gallery{
-    padding:10% 5% 2% 5%;
+    padding:10% 9% 2% 9%;
 }
 
 .rows{
@@ -177,6 +177,7 @@ h1{
     left:0;
     right:0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -192,6 +193,19 @@ h1{
     color: white;
     text-align: center;
     padding: 0 10px;
+}
+
+#damas, #lepanto{
+    font-size: 300%;
+}
+
+.overlay p{
+    color: white;
+    padding: 0 30px;
+    margin: 7px 0;
+    text-align: center;
+    line-height:1.4;
+    font-size: 100%;
 }
 
 .image-box img{
@@ -215,9 +229,18 @@ h1{
 }
 
 
-@media (max-width:1000px){
-    .overlay span{
+@media (max-width:1400px){
+    .overlay span, #damas, #lepanto{
         font-size: 250%;
+    }
+    .overlay p{
+        font-size: 80%;
+    }
+}
+
+@media (max-width:1150px){
+    .overlay p{
+        display: none;
     }
 }
 
@@ -226,12 +249,16 @@ h1{
         flex-direction: column;
     }
     .gallery {
-        padding:10% 8% 5% 8%;
+        padding:10% 10% 5% 10%;
     }
      .cols {
         width: 100%;
      }
-     .overlay span{
+     .overlay span, #damas, #lepanto{
         font-size: 400%;
+    }
+    .overlay p{
+        display:block;
+        font-size: 100%;
     }
 }
