@@ -254,9 +254,14 @@ h1{
      .cols {
         width: 100%;
      }
-     .overlay span, #damas, #lepanto{
+     .overlay span{
         font-size: 400%;
     }
+
+    #damas, #lepanto{
+        font-size: 350%;
+    }
+
     .overlay p{
         display:block;
         font-size: 100%;
