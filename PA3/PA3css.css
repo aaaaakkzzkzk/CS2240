@@ -1,0 +1,33 @@
+/* #navbarID{
+    background-color: #8eee67;
+} */
+
+body{
+    font-family: 'Anaheim', sans-serif;
+    
+}
+.ui-widget { font-family:'Anaheim', sans-serif;
+    
+}
+
+#navTitle, .titleFont{
+    font-family: 'Nova Mono', monospace;
+    color: #0B8D17;
+}
+
+#frog, #menu{
+    color:#00B712;
+}
+
+/* *{
+    border: 2px solid red;
+} */
+
+#greenBG{
+    background-color: #8eee67;
+}
+
+#frogLogo{
+    width: 300px;
+
+}
