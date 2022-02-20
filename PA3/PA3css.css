@@ -4,10 +4,10 @@
 
 body{
     font-family: 'Anaheim', sans-serif;
-    
 }
-.ui-widget { font-family:'Anaheim', sans-serif;
-    
+.ui-widget { 
+    font-family:'Anaheim', sans-serif;
+    font-size: 1.2rem;
 }
 
 #navTitle, .titleFont{
@@ -15,19 +15,27 @@ body{
     color: #0B8D17;
 }
 
-#frog, #menu{
+/* link text in navbar */
+#frog, #menu{ 
     color:#00B712;
 }
 
-/* *{
+/* div {
     border: 2px solid red;
 } */
 
-#greenBG{
+a {
+    text-decoration: none;
+}
+
+.greenBG{
     background-color: #8eee67;
 }
 
 #frogLogo{
     width: 300px;
+}
 
+img{
+    width:100%;
 }
