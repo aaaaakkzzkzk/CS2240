@@ -4,6 +4,8 @@
 
 body{
     font-family: 'Anaheim', sans-serif;
+    font-size: 1.2rem;
+    position: relative;
 }
 .ui-widget { 
     font-family:'Anaheim', sans-serif;
@@ -15,8 +17,18 @@ body{
     color: #0B8D17;
 }
 
+#draggable{
+    width: 200px; 
+    height: 150px; 
+    padding: 0.5em; 
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+
 /* link text in navbar */
-#frog, #menu{ 
+#link1, #link2, #link3{ 
     color:#00B712;
 }
 
@@ -38,4 +50,60 @@ a {
 
 img{
     width:100%;
+}
+
+/* for the frog profiles */
+.frogProfilePic{
+    margin: 0 30px 0 0;    
+    border: 1px solid #4b904b;
+    border-radius: 17px;
+    overflow: hidden;
+    float: left;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4fcf2;
+    color: #4b904b;
+    font-size: 1rem;
+}
+
+.profile-text{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* for the registration form */
+.form-input{
+    margin: 20px 0;
+}
+
+.error{
+    font-size: smaller;
+    color: rgb(255, 130, 130);
+}
+
+/* For table */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+thead {
+    background-color: #8eee67;
+}
+
+td, th {
+border: 1px solid #8eee67;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #eafce3;
+}
+
+tbody tr:hover {
+background-color: #cff7c0;
 }

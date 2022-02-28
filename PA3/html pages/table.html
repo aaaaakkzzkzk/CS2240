@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frogSite</title>
+    <!-- jQuery UI -->
+    <link href="../jquery/jquery-ui.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Nova+Mono&display=swap" rel="stylesheet">
+
+    <link href="../PA3css.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar Bootstrap -->
+    <div class="container-fluid">
+        <div class="row align-items-end">
+          <div class="col-3 border-bottom py-3 ps-5 pe-0">
+            <span class="navbar-brand" id="navTitle">frogSite</span>
+          </div>
+          <div class="col-9 p-0">
+            <ul class="nav nav-tabs justify-content-end pe-5">
+              <li class="nav-item">
+                <a class="nav-link " id="link1" href="../PA3index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="link2" href="frog.html">Frogs</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="link3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="register.html">Register</a></li>
+                  <li><a class="dropdown-item" href="#">Table</a></li>                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-9 m-auto p-5">
+                <div class="form-input">
+                    <input id="searchInput" type="text" placeholder="Search">
+                </div>
+                
+                <table>
+                    <thead>
+                    <tr>
+                      <th>Frog Name</th>
+                      <th>Other Names</th>
+                      <th>Scientific Name</th>
+                    </tr>
+                    </thead>
+                    <tbody id="frogTable">
+                    <tr>
+                      <td>Amazon Milk Frog </td>
+                      <td>Mission Golden-Eyed Tree frog</td>
+                      <td>Trachycephalus Resinifictrix</td>
+                    </tr>
+                    <tr>
+                      <td>Blue Poison Dart Frog</td>
+                      <td>Blue Poison Arrow Frog, Okopipi</td>
+                      <td>Dendrobates Tinctorius</td>
+                    </tr>
+                    <tr>
+                      <td>Borneo Eared Frog </td>
+                      <td>File-Eared Tree Frog, Bony-Headed Flying Frog </td>
+                      <td>Polypedates Otilophus</td>
+                    </tr>
+                    <tr>
+                      <td>Bumblebee Dart Frog</td>
+                      <td>Yellow-Banded Poison Frog, Yellow-Headed Poison Dart Frog</td>
+                      <td>Dendrobates Leucomelas</td>
+                    </tr>
+                    <tr>
+                        <td>Chaco Horned Frog</td>
+                        <td>Lesser Chini Frog</td>
+                        <td>Chacophrys Pierottii</td>
+                      </tr>
+                      <tr>
+                        <td>Common Rain Frog</td>
+                        <td>Bushveld Rain Frog, Desert Rain Frog</td>
+                        <td>Breviceps Adspersus</td>
+                      </tr>
+                      <tr>
+                        <td>Harlequin Poison Frog</td>
+                        <td>Harlequin Poison Dart Frog</td>
+                        <td>Oophaga Histrionica</td>
+                      </tr>
+                      <tr>
+                        <td>Mimic Poison Frog</td>
+                        <td>Poison Arrow Frog</td>
+                        <td>Ranitomeya Imitator</td>
+                      </tr>
+                      <tr>
+                        <td>Pacman Frog</td>
+                        <td>South American Horned Frog</td>
+                        <td>Ceratophrys</td>
+                      </tr>
+                      <tr>
+                        <td>Polka-Dot Tree Frog</td>
+                        <td>Hypsiboas Punctatus, Dotted Tree Frog</td>
+                        <td>Boana Punctata</td>
+                      </tr>
+                      <tr>
+                        <td>Red-Eyed Tree Frog</td>
+                        <td>-</td>
+                        <td>Agalychis Callidryas</td>
+                      </tr>
+                      <tr>
+                        <td>Reed Frog</td>
+                        <td>-</td>
+                        <td>Hyperolius Viridiflavus</td>
+                      </tr>
+                      <tr>
+                        <td>Tomato Frog</td>
+                        <td>-</td>
+                        <td>Dyscophus Antongilii</td>
+                      </tr>
+                      <tr>
+                        <td>Waxy Monkey Frog</td>
+                        <td>Waxy Monkey Leaf Frog, Waxy Monkey Tree Frog</td>
+                        <td>Phyllomedusa Sauvagii</td>
+                      </tr>
+                      <tr>
+                        <td>White's Tree Frog</td>
+                        <td>Dumpy Tree Frog, Green Tree Frog</td>
+                        <td>Litoria Caerulea</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery UI script -->
+    <script src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.js"></script>
+    <script src="../PA3script.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>

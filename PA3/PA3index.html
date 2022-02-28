@@ -30,17 +30,29 @@
               <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="frog" href="/html pages/frog.html">Frogs</a>
+              <a class="nav-link" id="link1" href="/html pages/frog.html">Frogs</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="menu" href="#">Menu</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="html pages/register.html">Register</a></li>
+                <li><a class="dropdown-item" href="html pages/table.html">Table</a></li>                  
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    
-    <div class="col-8 m-auto" >
+    <!-- Modal -->
+    <div id="frogModal" title="Regiter Now!">
+      <p>Don't miss out on anything! It's easy! Register now!</p>
+    </div>
+
+  
+    <!-- Content -->
+    <div class="col-8 m-auto mb-5" >
       <div class="d-flex justify-content-center">
         <img src="/frog pics/frog logo.png" id="frogLogo">
       </div>
@@ -49,6 +61,10 @@
       </div>
     </div>
 
+    <!-- Draggable -->
+    <div id="draggable" class="ui-widget-content">
+      <p>Learn about some frogs! Don't forget to register to see more content!</p>
+    </div>
 
     <!-- jQuery UI script -->
     <script src="/jquery/jquery.js"></script>
