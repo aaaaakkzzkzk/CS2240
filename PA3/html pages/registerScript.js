@@ -1,5 +1,38 @@
-// for Registration form
+//Best Frog
+let messageBestFrog = document.querySelector("#bestFrogMessage");
+$("#submitBestFrog").on("click", function(){
+    if(document.querySelector("#frogNameInput").value.trim() === ''){
+        messageBestFrog.innerText = "Please input a frog name."
+    }else{
+        messageBestFrog.innerText = "That is a cool frog!"
+    }
+});
 
+//Auto complete 
+ const frogNames = [
+    "Amazon Milk Frog",
+    "Blue Poison Dart Frog",
+    "Borneo Eared Frog",
+    "Bumblebee Dart Frog",
+    "Chaco Horned Frog",
+    "Common Rain Frog",
+    "Harlequin Poison Dart Frog",
+    "Mimic Poison Dart Frog",
+    "Pacman Frog",
+    "Polka-Dot Tree Frog",
+    "Red Eyed Tree Frog",
+    "Reed Frog",
+    "Tomato Frog",
+    "Waxy Monkey Frog",
+    "White's Tree Frog"
+  ];
+  $( "#frogNameInput" ).autocomplete({ 
+    source: frogNames
+  });
+
+
+
+// for Registration form
 $("#bday").datepicker({
     changeMonth: true,
     changeYear: true
@@ -7,30 +40,36 @@ $("#bday").datepicker({
 
 $( ".radioset" ).buttonset();
 
+$( "#registerDialogB" ).dialog({
+    autoOpen: false,
+    show: {
+      effect: "slide",
+      duration: 800
+    },
+    hide: {
+      effect: "slide",
+      duration: 800
+    }
+  });
+
 const form = document.querySelector('#form');
 const email = document.querySelector('#email');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    validateInputs(); 
+    checkInputs(); 
     });
 
 const setError = (element, message) => {
     const formInput = element.parentElement;
     const errorDiv = formInput.querySelector('.error');
-
     errorDiv.innerText = message;
-    // inputControl.classList.add('error');
-    // inputControl.classList.remove('success')
 }
 
 const setSuccess = element => {
     const formInput = element.parentElement;
     const errorDiv = formInput.querySelector('.error');
-
     errorDiv.innerText = '';
-    // inputControl.classList.add('success');
-    // inputControl.classList.remove('error');
 };
 
 const isValidEmail = email => {
@@ -38,21 +77,19 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
-const isValidBday = element =>{
-    //add some sht to validate bday
-    return true;
-}
 
-const validateInputs = () => {
+const checkInputs = () => {
     const username = document.querySelector('#username');
     const bday = document.querySelector('#bday');
     const password = document.querySelector('#password');
     const password2 = document.querySelector('#password2');
+    let formValid = 0;
 
     if(username.value.trim() === '') {
         setError(username, 'Username is required');
     } else {
         setSuccess(username);
+        formValid++;
     }
 
     if(email.value.trim() === '') {
@@ -61,14 +98,14 @@ const validateInputs = () => {
         setError(email, 'Provide a valid email address');
     } else {
         setSuccess(email);
+        formValid++;
     }
 
     if(bday.value.trim() === '') {
         setError(bday, 'Birth date is required');
-    } else if (!isValidBday(bday)) {
-        setError(bday, 'Provide a valid birth date');
     } else {
         setSuccess(bday);
+        formValid++;
     }
 
     if(password.value.trim() === '') {
@@ -77,6 +114,7 @@ const validateInputs = () => {
         setError(password, 'Password must be at least 8 character.')
     } else {
         setSuccess(password);
+        formValid++;
     }
 
     if(password2.value.trim() === '') {
@@ -85,6 +123,11 @@ const validateInputs = () => {
         setError(password2, "Passwords doesn't match");
     } else {
         setSuccess(password2);
+        formValid++;
+    }
+
+    if(formValid===5){
+        $( "#registerDialogB" ).dialog( "open" );
     }
 
 };

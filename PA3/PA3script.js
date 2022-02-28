@@ -34,44 +34,31 @@ $( "#frogModal" ).dialog({
 
 $( ".draggable" ).draggable({ revert: true });
 
-$("#draggable2").dblclick(()=>{$("#draggable2").effect("slide","slow")});
+let state =true;
+$("#draggable2").dblclick(function() {
+	if ( state ) {
+	  $( this ).animate({
+		backgroundColor: "##0c8217",
+		color: "#fff"
+	  }, 1000 );
+	} else {
+	  $( this).animate({
+		backgroundColor: "#f4fcf2",
+		color: "#4b904b"
+	  }, 1000 );
+	}
+	state = !state;
+  });
 
-//for table filter
+//table filter
+$("#searchInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#frogTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
 
-// $("#searchInput").on("keyup", function() {
-//     var value = $(this).val().toLowerCase();
-//     $("#frogTable tr").filter(function() {
-//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//     });
-//   });
-
-//   const availableTags = [
-//     "ActionScript",
-//     "AppleScript",
-//     "Asp",
-//     "BASIC",
-//     "C",
-//     "C++",
-//     "Clojure",
-//     "COBOL",
-//     "ColdFusion",
-//     "Erlang",
-//     "Fortran",
-//     "Groovy",
-//     "Haskell",
-//     "Java",
-//     "JavaScript",
-//     "Lisp",
-//     "Perl",
-//     "PHP",
-//     "Python",
-//     "Ruby",
-//     "Scala",
-//     "Scheme"
-//   ];
-//   $( "#" ).autocomplete({ //place this somewhere
-//     source: availableTags
-//   });
+ 
 
 
 
