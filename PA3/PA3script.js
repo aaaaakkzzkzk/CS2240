@@ -4,14 +4,22 @@ $( "#frogTabs" ).tabs();
 
 $( "#frogTrivia" ).accordion({collapsible:true,heightStyle: "content"});
 
+$("#frogLogo").on("click", function(){$("#frogLogo").effect("bounce",2000)});
+
 $( "#frogModal" ).dialog({
     height: "auto",
     modal:true,
     width:300,
+	show: {
+        effect: "bounce",
+		times: 2,
+        duration: 1000
+      },
 	buttons: [
 		{            
 			text: "Register",
 			click: function() {
+				window.location.href = "html pages/register.html";
 				$( this ).dialog( "close" );
 			}
 		},
@@ -24,7 +32,9 @@ $( "#frogModal" ).dialog({
 	]
 });
 
-$( "#draggable" ).draggable({ revert: true });
+$( ".draggable" ).draggable({ revert: true });
+
+$("#draggable2").dblclick(()=>{$("#draggable2").effect("slide","slow")});
 
 //for table filter
 

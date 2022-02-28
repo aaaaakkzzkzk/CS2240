@@ -6,6 +6,7 @@ body{
     font-family: 'Anaheim', sans-serif;
     font-size: 1.2rem;
     position: relative;
+    color: #32af3f;
 }
 .ui-widget { 
     font-family:'Anaheim', sans-serif;
@@ -17,13 +18,24 @@ body{
     color: #0B8D17;
 }
 
-#draggable{
+#draggable1{
     width: 200px; 
-    height: 150px; 
+    height: 170px;
     padding: 0.5em; 
-    margin-left: 50px;
+    margin: 0 0 0 50px;
+    display: inline-flex;
     text-align: center;
+}
 
+#draggable2{
+    width: 210px; 
+    height: 170px;
+    padding: 0.5em; 
+    margin-left: auto;
+    margin-right: 50px;
+    display: inline-flex;
+    float: right;
+    text-align: center;
 }
 
 
